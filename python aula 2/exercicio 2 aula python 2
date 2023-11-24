@@ -1,0 +1,5 @@
+Países = ("Brasil", "Canadá", "Austrália", "Espanha", "Índia")
+
+for País in Países:
+    Quantidade_de_caracteres = len(País)
+    print(f"A quantidade de caracteres do {País} é: {Quantidade_de_caracteres}")
