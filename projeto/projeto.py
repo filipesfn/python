@@ -62,6 +62,13 @@ def lista_de_prioridades():
     for i, chave in enumerate(lista_de_tarefas):
         print(f'{i} Tarefa: {chave["Descrição"]}, Categoria: {chave["Categoria"]}, Prioridade: {chave["Prioridade"]}, Concluído: {chave["Concluído"]}')
 
+def lista_de_categorias():
+    global lista_de_tarefas
+    lista_de_tarefas = sorted(lista_de_tarefas, key=lambda x: x['Categoria'], reverse=True)
+    for i, chave in enumerate(lista_de_tarefas):
+        print(f'{i} Tarefa: {chave["Descrição"]}, Categoria: {chave["Categoria"]}, Prioridade: {chave["Prioridade"]}, Concluído: {chave["Concluído"]}')
+
+
 def tarefa_concluida():
     for i, item in enumerate(lista_de_tarefas):
         print(f"""
@@ -96,6 +103,6 @@ while True:
         case 4:
             lista_de_prioridades()
         case 5:
-            print("Chamar a função para visualizar as tarefas por categoria")
+            lista_de_categorias()
         case 0:
             break
